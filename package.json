@@ -1,0 +1,13 @@
+{
+    "name": "job-analytics-dashboard",
+    "version": "1.0.0",
+    "description": "Job Analytics Dashboard with Tableau Integration",
+    "private": true,
+    "scripts": {
+        "start": "serve src"
+    },
+    "dependencies": {
+        "serve": "^14.2.1",
+        "vercel": "^41.0.2"
+    }
+}
