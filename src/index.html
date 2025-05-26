@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Analytics Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Tableau JavaScript API -->
+    <script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <!-- Your logo here -->
+                Data Analytics
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#"><i class="fas fa-th-large"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-chart-line"></i> Activity</a></li>
+                    <li><a href="#"><i class="fas fa-file-alt"></i> Reports</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-timestamp" id="sidebarTimestamp">
+                Current Time (IST): --:--:--
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <h2>Job Analytics Dashboard</h2>
+                <div class="header-icons">
+                    <i class="fas fa-bell"></i>
+                    <i class="fas fa-cog"></i>
+                    <div class="user-avatar">
+                        <!-- User avatar or icon -->
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                </div>
+            </header>
+
+            <div class="container">
+                <div class="charts-grid">
+                    <!-- Chart 1 -->
+                    <div class="chart-container wide" data-viz-id="tableauViz1">
+                        <h2>Job Postings by Company and Job Portal</h2>
+                        <div id="tableauViz1" class="tableau-viz"></div>
+                    </div>
+
+                    <!-- Chart 2 -->
+                    <div class="chart-container time-restricted wide" data-viz-id="tableauViz2">
+                        <h2>Role and Job Title Analysis</h2>
+                        <div id="tableauViz2" class="tableau-viz"></div>
+                    </div>
+
+                    <!-- Chart 3 -->
+                    <div class="chart-container" data-viz-id="tableauViz3">
+                        <h2>Country, Job Title and Role Relationship</h2>
+                        <div id="tableauViz3" class="tableau-viz"></div>
+                    </div>
+
+                    <!-- Chart 4 -->
+                    <div class="chart-container time-restricted" data-viz-id="tableauViz4">
+                        <h2>Top 5 Roles in 2023</h2>
+                        <div id="tableauViz4" class="tableau-viz"></div>
+                    </div>
+
+                    <!-- Chart 5 -->
+                    <div class="chart-container" data-viz-id="tableauViz5">
+                        <h2>Top 20 Companies - UI/UX Designers</h2>
+                        <div id="tableauViz5" class="tableau-viz"></div>
+                    </div>
+
+                    <!-- Chart 6 -->
+                    <div class="chart-container time-restricted" data-viz-id="tableauViz6">
+                        <h2>Internship Preference by Work Type</h2>
+                        <div id="tableauViz6" class="tableau-viz"></div>
+                    </div>
+
+                    <!-- Chart 7 -->
+                    <div class="chart-container time-restricted" data-viz-id="tableauViz7">
+                        <h2>Full Time Jobs in Africa</h2>
+                        <div id="tableauViz7" class="tableau-viz"></div>
+                    </div>
+
+                    <!-- Chart 8 -->
+                    <div class="chart-container time-restricted" data-viz-id="tableauViz8">
+                        <h2>Top 10 Companies for Data Engineers</h2>
+                        <div id="tableauViz8" class="tableau-viz"></div>
+                    </div>
+
+                    <!-- Chart 9 -->
+                    <div class="chart-container time-restricted" data-viz-id="tableauViz9">
+                        <h2>Jobs in India and Germany</h2>
+                        <div id="tableauViz9" class="tableau-viz"></div>
+                    </div>
+
+                    <!-- Chart 10 -->
+                    <div class="chart-container time-restricted" data-viz-id="tableauViz10">
+                        <h2>Mechanical Engineers Analysis</h2>
+                        <div id="tableauViz10" class="tableau-viz"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal for expanded view -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-viz-container" id="modalVizContainer"></div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 
