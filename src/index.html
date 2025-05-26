@@ -13,20 +13,27 @@
 <body>
     <div class="dashboard-wrapper">
         <!-- Sidebar -->
-        <aside class="sidebar">
-            <div class="sidebar-logo">
-                <!-- Your logo here -->
-                Data Analytics
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    Job Analytics
+                </div>
             </div>
             <nav class="sidebar-nav">
                 <ul>
-                    <li><a href="#"><i class="fas fa-th-large"></i> Dashboard</a></li>
-                    <li><a href="#"><i class="fas fa-chart-line"></i> Activity</a></li>
-                    <li><a href="#"><i class="fas fa-file-alt"></i> Reports</a></li>
+                    <li><a href="#"><i class="fas fa-th-large"></i> <span>Dashboard</span></a></li>
+                    <li><a href="#"><i class="fas fa-chart-line"></i> <span>Activity</span></a></li>
+                    <li><a href="#"><i class="fas fa-file-alt"></i> <span>Reports</span></a></li>
                 </ul>
             </nav>
-            <div class="sidebar-timestamp" id="sidebarTimestamp">
-                Current Time (IST): --:--:--
+            <div class="sidebar-footer">
+                <div class="sidebar-timestamp" id="sidebarTimestamp">
+                    Current Time (IST): --:--:--
+                </div>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-chevron-left"></i>
+                    <span>Collapse</span>
+                </button>
             </div>
         </aside>
 

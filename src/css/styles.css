@@ -50,29 +50,112 @@ body::before {
 
 /* Sidebar Styles */
 .sidebar {
-    width: 250px; /* Adjust as needed */
+    width: 250px;
     background-color: var(--sidebar-color);
     color: var(--sidebar-link-color);
     padding: 20px;
-    height: 100vh; /* Full height sidebar */
+    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
     overflow-y: auto;
-    display: flex; /* Use flexbox to push timestamp to bottom */
+    display: flex;
     flex-direction: column;
+    transition: width 0.3s ease;
+}
+
+.sidebar.collapsed {
+    width: 80px;
+}
+
+.sidebar-header {
+    margin-bottom: 30px;
 }
 
 .sidebar-logo {
     font-size: 1.8em;
     font-weight: bold;
+    color: var(--sidebar-link-hover-color);
+    white-space: nowrap;
+    overflow: hidden;
     text-align: center;
-    margin-bottom: 30px;
-    color: var(--sidebar-link-hover-color); /* White color for logo */
 }
 
 .sidebar-nav {
-    flex-grow: 1; /* Allow nav to take up remaining space */
+    flex-grow: 1;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-timestamp {
+    font-size: 0.9em;
+    text-align: center;
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.sidebar-toggle {
+    background: var(--secondary-color);
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+    background: var(--primary-color);
+}
+
+.sidebar-toggle i {
+    transition: transform 0.3s ease;
+    font-size: 1.2em;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-toggle span {
+    transition: opacity 0.3s ease;
+}
+
+.sidebar.collapsed .sidebar-toggle {
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.sidebar.collapsed .sidebar-toggle i {
+    font-size: 1.2em;
+    width: 20px;
+    height: 20px;
+}
+
+.sidebar.collapsed .sidebar-toggle span {
+    display: none;
+}
+
+.sidebar.collapsed .sidebar-logo {
+    display: none;
+}
+
+.sidebar.collapsed .sidebar-timestamp {
+    font-size: 0.7em;
+    padding: 0 5px;
 }
 
 .sidebar-nav ul {
@@ -97,20 +180,46 @@ body::before {
 
 .sidebar-nav a i {
     margin-right: 10px;
-}
-
-.sidebar-nav a:hover,
-.sidebar-nav a.active {
-    background-color: var(--secondary-color);
-    color: var(--sidebar-link-hover-color);
-}
-
-.sidebar-timestamp {
-    margin-top: auto; /* Push to the bottom */
-    font-size: 0.9em;
+    min-width: 20px;
     text-align: center;
-    padding-top: 20px; /* Add some space above */
-    color: rgba(255, 255, 255, 0.5); /* Lighter color */
+    font-size: 1.2em;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-nav a span {
+    transition: opacity 0.3s ease;
+}
+
+.sidebar.collapsed .sidebar-nav a span {
+    opacity: 0;
+    width: 0;
+    display: none;
+}
+
+.sidebar.collapsed .sidebar-nav a {
+    justify-content: center;
+    padding: 10px 5px;
+}
+
+.sidebar.collapsed .sidebar-nav a i {
+    margin-right: 0;
+    font-size: 1.2em;
+    width: 20px;
+    height: 20px;
+}
+
+/* Update main content margin for collapsed sidebar */
+.main-content {
+    margin-left: 250px;
+    transition: margin-left 0.3s ease;
+}
+
+.main-content.sidebar-collapsed {
+    margin-left: 80px;
 }
 
 /* Main Content Area */

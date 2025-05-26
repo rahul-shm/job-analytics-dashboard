@@ -1,3 +1,38 @@
+// Sidebar Toggle Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const sidebar = document.getElementById('sidebar');
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const mainContent = document.querySelector('.main-content');
+
+    function toggleSidebar() {
+        sidebar.classList.toggle('collapsed');
+        mainContent.classList.toggle('sidebar-collapsed');
+        
+        // Save the state to localStorage
+        const isCollapsed = sidebar.classList.contains('collapsed');
+        localStorage.setItem('sidebarCollapsed', isCollapsed);
+    }
+
+    // Initialize sidebar state from localStorage
+    const isCollapsed = localStorage.getItem('sidebarCollapsed') === 'true';
+    if (isCollapsed) {
+        sidebar.classList.add('collapsed');
+        mainContent.classList.add('sidebar-collapsed');
+    }
+
+    // Add click event listener to toggle button
+    if (sidebarToggle) {
+        sidebarToggle.addEventListener('click', toggleSidebar);
+    }
+
+    // Add keyboard shortcut (Alt + S) for toggling sidebar
+    document.addEventListener('keydown', function(e) {
+        if (e.altKey && e.key === 's') {
+            toggleSidebar();
+        }
+    });
+});
+
 // Time handling functions
 function updateCurrentTime() {
     const now = new Date();

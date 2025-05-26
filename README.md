@@ -1,11 +1,12 @@
-# Job Description Dashboard
+# Job Analytics Dashboard
 
-A modern web application for managing and analyzing job descriptions. This dashboard provides an intuitive interface for viewing, filtering, and analyzing job postings.
+A modern web application for analyzing and visualizing job market data. This dashboard provides comprehensive analytics and insights into job postings, company trends, and market dynamics.
 
 ## Features
 
-- Interactive job description viewer
-- Filtering and search capabilities
+- Interactive job analytics dashboard
+- Real-time data visualization
+- Advanced filtering and search capabilities
 - Modern and responsive design
 - Data visualization components
 - Excel data integration
@@ -13,7 +14,7 @@ A modern web application for managing and analyzing job descriptions. This dashb
 ## Project Structure
 
 ```
-job-description-dashboard/
+job-analytics-dashboard/
 ├── src/
 │   ├── assets/
 │   │   └── images/
@@ -35,17 +36,18 @@ job-description-dashboard/
 - HTML5
 - CSS3
 - JavaScript
+- Tableau Integration
 - Excel Data Integration
 
 ## Getting Started
 
 1. Clone the repository
 2. Open `src/index.html` in your web browser
-3. Start exploring the job descriptions
+3. Start exploring the job analytics
 
 ## Data Source
 
-The dashboard uses data from `NullCLassPX.xlsx` for job descriptions and related information.
+The dashboard uses data from `NullCLassPX.xlsx` for job market analytics and related information.
 
 ## Deployment
 
